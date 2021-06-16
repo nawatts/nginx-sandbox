@@ -1,0 +1,9 @@
+services:
+  nginx:
+    build: .
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./conf.d:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+    ports:
+      - "8000:80"
